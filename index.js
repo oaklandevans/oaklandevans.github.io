@@ -3,8 +3,7 @@ const statsDiv = document.getElementById("stats");
 const startGameBtn = document.getElementById("startGameBtn");
 
 const paragraphs = [
-    `The Rocker is a 2008 American comedy film directed by Peter Cattaneo`,
-    `The oldest classical Greek and Latin writing had little or no space between words and could be written in boustrophedon (alternating directions).`
+    `animateToOverview: function(animationType) { for (let w = 0; w < this._workspaces.length; w++) { if (animationType == AnimationType.ZOOM) this._workspaces[w].zoomToOverview(); else this._workspaces[w].fadeToOverview();}this._updateWorkspaceActors(false);},`
 ];
 
 const startGame = () => {
