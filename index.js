@@ -58,11 +58,11 @@ const startGame = () => {
             endTime = new Date();
             const delta = endTime - startTime;
             const seconds = delta / 1000;
-            const numberOfWords = text.split(' ').length;
+            const numberOfWords = characters.length / 4.7; // average word length
             const wps = numberOfWords / seconds;
             const wpm = wps * 60.0;
             // Display Stats
-            document.getElementById('stats').innerText = `wpm = ${wpm}`;
+            document.getElementById('stats').innerText = `wpm = ${wpm.toFixed(2)}`;
             
             document.removeEventListener('keydown', keydown);
             startGameBtn.classList.remove('hidden');
