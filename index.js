@@ -3,7 +3,15 @@ const statsDiv = document.getElementById("stats");
 const startGameBtn = document.getElementById("startGameBtn");
 
 const paragraphs = [
-    `animateToOverview: function(animationType) { for (let w = 0; w < this._workspaces.length; w++) { if (animationType == AnimationType.ZOOM) this._workspaces[w].zoomToOverview(); else this._workspaces[w].fadeToOverview();}this._updateWorkspaceActors(false);},`
+    "animateToOverview: function(animationType) {\n" +
+    "for (let w = 0; w < this._workspaces.length; w++) {\n" +
+    "if (animationType == AnimationType.ZOOM)\n" +
+    "this._workspaces[w].zoomToOverview();\n" +
+    "else\n" +
+    "this._workspaces[w].fadeToOverview();\n" +
+    "}\n" +
+    "this._updateWorkspaceActors(false);\n" +
+    "},"
 ];
 
 const startGame = () => {
@@ -34,7 +42,10 @@ const startGame = () => {
             startTime = new Date();
         }
         
-        if (key === cursorCharacter.innerText) {
+        if (
+            key === cursorCharacter.innerText ||
+            (key === 'Enter' && cursorCharacter.innerText === "\n") // handle enter
+        ) {
             // we typed the correct key
             cursorCharacter.classList.remove('cursor');
             cursorCharacter.classList.add('done');
