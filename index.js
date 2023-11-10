@@ -3,6 +3,7 @@ const statsDiv = document.getElementById("stats");
 const startGameBtn = document.getElementById("startGameBtn");
 
 const paragraphs = [
+    // section 1
     "animateToOverview: function(animationType) {\n" +
     "for (let w = 0; w < this._workspaces.length; w++) {\n" +
     "if (animationType == AnimationType.ZOOM)\n" +
@@ -11,6 +12,16 @@ const paragraphs = [
     "this._workspaces[w].fadeToOverview();\n" +
     "}\n" +
     "this._updateWorkspaceActors(false);\n" +
+    "},",
+    // section 2
+    "animateFromOverview: function(animationType) {\n" +
+    "this.actor.remove_clip();\n" +
+    "for (let w = 0; w < this._workspaces.length; w++) {\n" +
+    "if (animationType == AnimationType.ZOOM)\n" +
+    "this._workspaces[w].zoomFromOverview();\n" +
+    "else\n" +
+    "this._workspaces[w].fadeFromOverview();\n" +
+    "}\n" +
     "},"
 ];
 

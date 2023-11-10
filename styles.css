@@ -1,4 +1,10 @@
+/*Dark Cyan (#03131A),*/
+/*Light Gray (#F8F8F8),*/
+/*Pastel Blue (#8FD6E8),*/
+/*Pastel Green (#D4FF9D)  ||  rgb(212, 255, 157)*/
+
 body {
+    background-color: #03131A;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -7,30 +13,53 @@ body {
 }
 
 .cursor {
-    background-color: aqua;
+    background-color: #8FD6E8;
 }
 
 .done {
     color: rgb(128, 128, 128);
 }
 
+.hidden {
+    display: none;
+}
+
+#header {
+    font-size: 3rem;
+    color: #F8F8F8;
+}
+
 #typing {
     width: 40rem;
     font-size: 1.5rem;
-    border: 1px solid black;
+    color: #F8F8F8;
+    border: 1px solid #D4FF9D;
     border-radius: 0.5rem;
     padding: 2rem;
+    box-shadow:
+            inset 0 0 1em rgba(212, 255, 157, 0.3),
+            0 0 0 0 white,
+            0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
 }
 
 #stats {
     font-size: 1.5rem;
+    color: #F8F8F8;
 }
 
 #startGameBtn {
     font-size: 1.5rem;
     border-radius: 0.5rem;
+    border: 1px solid #D4FF9D;
+    background-color: #03131A;
+    color: #F8F8F8;
 }
 
-.hidden {
-    display: none;
+#startGameBtn:hover {
+    background-color: #8FD6E8;
+    color: #03131A;
+    box-shadow:
+            inset 0 0 1em rgba(212, 255, 157, 0.3),
+            0 0 0 0 white,
+            0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
 }
