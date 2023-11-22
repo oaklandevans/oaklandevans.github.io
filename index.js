@@ -37,6 +37,12 @@ const startGame = () => {
         .map(char => {
             const span = document.createElement('span');
             span.innerText = char;
+            // add enter icons
+            if(char === '\n') {
+                span.classList.add('enter-icon');
+                span.classList.add('fa');
+                span.classList.add('fa-level-down');
+            }
             typingDiv.appendChild(span);
             return span;
         });

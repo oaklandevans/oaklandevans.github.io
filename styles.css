@@ -24,6 +24,10 @@ body {
     display: none;
 }
 
+.enter-icon {
+    display: initial !important;
+}
+
 #header {
     font-size: 3rem;
     color: #F8F8F8;
