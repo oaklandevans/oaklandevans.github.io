@@ -33,6 +33,117 @@ body {
     color: #F8F8F8;
 }
 
+.keyboard {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 0.25rem;
+}
+
+.single-key {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.dual-key {
+
+}
+
+.rectangle-x-sm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-sm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-med {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-x-lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
 #typing {
     width: 40rem;
     font-size: 1.5rem;
@@ -40,10 +151,9 @@ body {
     border: 1px solid #D4FF9D;
     border-radius: 0.5rem;
     padding: 2rem;
-    box-shadow:
-            inset 0 0 1em rgba(212, 255, 157, 0.3),
-            0 0 0 0 white,
-            0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+    0 0 0 0 white,
+    0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
 }
 
 #stats {
@@ -62,8 +172,7 @@ body {
 #startGameBtn:hover {
     background-color: #8FD6E8;
     color: #03131A;
-    box-shadow:
-            inset 0 0 1em rgba(212, 255, 157, 0.3),
-            0 0 0 0 white,
-            0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+    0 0 0 0 white,
+    0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
 }
