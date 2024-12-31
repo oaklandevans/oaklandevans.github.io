@@ -187,3 +187,7 @@ body {
     0 0 0 0 white,
     0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
 }
+
+.active-key {
+    background-color: #8FD6E8;
+}
