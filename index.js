@@ -26,6 +26,7 @@ const paragraphs = [
 ];
 
 function markKey(activeKey) {
+
     switch (activeKey) {
         case "a":
             document.getElementById('a').classList.add('active-key');
@@ -85,9 +86,6 @@ function markKey(activeKey) {
             document.getElementById('s').classList.add('active-key');
             break;
         case "t":
-            document.getElementById('t').classList.add('active-key');
-            break;
-        case "T":
             document.getElementById('t').classList.add('active-key');
             break;
         case "u":
@@ -212,14 +210,170 @@ function markKey(activeKey) {
             document.getElementById('shiftRight').classList.add('active-key');
             document.getElementById('z').classList.add('active-key');
             break;
+
+        // space bar
+        case " ":
+            document.getElementById('space').classList.add('active-key');
+            break;
+
+        // enter
+        case "\n":
+            document.getElementById('enter').classList.add('active-key');
+            break;
+
+        // first row - dual keys
         case "`":
             document.getElementById('`').classList.add('active-key');
             break;
+        case "1":
+            document.getElementById('1').classList.add('active-key');
+            break;
+        case "2":
+            document.getElementById('2').classList.add('active-key');
+            break;
+        case "3":
+            document.getElementById('3').classList.add('active-key');
+            break;
+        case "4":
+            document.getElementById('4').classList.add('active-key');
+            break;
+        case "5":
+            document.getElementById('5').classList.add('active-key');
+            break;
+        case "6":
+            document.getElementById('6').classList.add('active-key');
+            break;
+        case "7":
+            document.getElementById('7').classList.add('active-key');
+            break;
+        case "8":
+            document.getElementById('8').classList.add('active-key');
+            break;
+        case "9":
+            document.getElementById('9').classList.add('active-key');
+            break;
+        case "0":
+            document.getElementById('0').classList.add('active-key');
+            break;
+        case "-":
+            document.getElementById('-').classList.add('active-key');
+            break;
+        case "=":
+            document.getElementById('=').classList.add('active-key');
+            break;
         case "~":
+            document.getElementById('shiftRight').classList.add('active-key');
             document.getElementById('`').classList.add('active-key');
             break;
-        case " ":
-            document.getElementById('space').classList.add('active-key');
+        case "!":
+            document.getElementById('shiftRight').classList.add('active-key');
+            document.getElementById('1').classList.add('active-key');
+            break;
+        case "@":
+            document.getElementById('shiftRight').classList.add('active-key');
+            document.getElementById('2').classList.add('active-key');
+            break;
+        case "#":
+            document.getElementById('shiftRight').classList.add('active-key');
+            document.getElementById('3').classList.add('active-key');
+            break;
+        case "$":
+            document.getElementById('shiftRight').classList.add('active-key');
+            document.getElementById('4').classList.add('active-key');
+            break;
+        case "%":
+            document.getElementById('shiftRight').classList.add('active-key');
+            document.getElementById('5').classList.add('active-key');
+            break;
+        case "^":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('6').classList.add('active-key');
+            break;
+        case "&":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('7').classList.add('active-key');
+            break;
+        case "*":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('8').classList.add('active-key');
+            break;
+        case "(":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('9').classList.add('active-key');
+            break;
+        case ")":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('0').classList.add('active-key');
+            break;
+        case "_":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('-').classList.add('active-key');
+            break;
+        case "+":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('=').classList.add('active-key');
+            break;
+
+        // second row - dual keys
+        case "[":
+            document.getElementById('[').classList.add('active-key');
+            break;
+        case "]":
+            document.getElementById(']').classList.add('active-key');
+            break;
+        case "\\":
+            document.getElementById('\\').classList.add('active-key');
+            break;
+        case "{":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('[').classList.add('active-key');
+            break;
+        case "}":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById(']').classList.add('active-key');
+            break;
+        case "|":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById('\\').classList.add('active-key');
+            break;
+
+        // third row - dual keys
+        case ";":
+            document.getElementById(';').classList.add('active-key');
+            break;
+        case "'":
+            document.getElementById("'").classList.add('active-key');
+            break;
+        case ":":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById(';').classList.add('active-key');
+            break;
+        case '"':
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById("'").classList.add('active-key');
+            break;
+
+        // fourth row - dual keys
+        case ",":
+            document.getElementById(',').classList.add('active-key');
+            break;
+        case ".":
+            document.getElementById(".").classList.add('active-key');
+            break;
+        case "/":
+            document.getElementById("/").classList.add('active-key');
+            break;
+        case "<":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById(',').classList.add('active-key');
+            break;
+        case ">":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById(".").classList.add('active-key');
+            break;
+        case "?":
+            document.getElementById('shiftLeft').classList.add('active-key');
+            document.getElementById("/").classList.add('active-key');
             break;
     }
 }
