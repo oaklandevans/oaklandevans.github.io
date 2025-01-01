@@ -191,3 +191,61 @@ body {
 .active-key {
     background-color: #8FD6E8;
 }
+
+.hands {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+}
+
+.left-hand {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 0.35rem;
+}
+
+.right-hand {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 0.35rem;
+}
+
+.finger {
+    background-color: #D4FF9D;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    opacity: 0.5;
+}
+
+.active-finger {
+    background-color: #8FD6E8;
+    opacity: 1;
+}
+
+.finger-1 {
+    width: 3.5rem;
+    height: 4rem;
+}
+
+.finger-2 {
+    width: 3rem;
+    height: 10rem;
+}
+
+.finger-3 {
+    width: 3rem;
+    height: 12rem;
+}
+
+.finger-4 {
+    width: 3rem;
+    height: 11rem;
+}
+
+.finger-5 {
+    width: 3rem;
+    height: 6rem;
+}
+
