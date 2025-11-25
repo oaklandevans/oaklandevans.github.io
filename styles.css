@@ -43,7 +43,6 @@ body {
 #typing:focus,
 #typing:focus-visible {
     outline: none;
-    box-shadow: none;
 }
 
 .keyboard {

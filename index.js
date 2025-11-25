@@ -542,6 +542,12 @@ const startGame = () => {
     typingDiv.innerHTML = '';
     statsDiv.innerHTML = '';
 
+    // Ensure the typing area holds focus for the entire session to prevent
+    // the browser from scrolling the page on Space/Arrow keys.
+    if (typeof typingDiv.focus === 'function') {
+        typingDiv.focus({ preventScroll: true });
+    }
+
     const text = paragraphs[parseInt(Math.random() * paragraphs.length)];
 
     const characters = text
@@ -567,7 +573,15 @@ const startGame = () => {
     let startTime = null;
     let endTime = null;
 
-    const keydown = ({key}) => {
+    // Prevent browser default scrolling (e.g., Space/PageDown/Arrow keys) during gameplay
+    const keydown = (event) => {
+        const key = event.key;
+        // Only prevent default for keys that would scroll the page
+        const scrollKeys = new Set([' ', 'Spacebar', 'PageDown', 'PageUp', 'ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'Home', 'End']);
+        if (scrollKeys.has(key) && typeof event.preventDefault === 'function') {
+            event.preventDefault();
+        }
+
         if (!startTime) {
             startTime = new Date();
         }
