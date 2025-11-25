@@ -12,10 +12,11 @@
 
     <body>
         <h1 id="header">Typing Game</h1>
-        <div id="typing">Better Every Day</div>
+        <div id="typing" tabindex="-1">Better Every Day</div>
         <div id="stats"></div>
         <button id="startGameBtn" onclick="startGame()">Start Game</button>
-        <div id="keyboard" class="keyboard">
+        <button id="toggleKeyboardBtn" onclick="toggleKeyboard()">Show Keyboard</button>
+        <div id="keyboard" class="keyboard hidden">
 
             <div id="row1" class="row">
                 <span id="`" class="dual-key">

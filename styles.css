@@ -33,12 +33,30 @@ body {
     color: #F8F8F8;
 }
 
+/* Remove default browser focus outlines on the typing area to keep styling consistent
+   We programmatically focus #typing (tabindex="-1") to capture keystrokes after toggling the keyboard.
+   Since it isn't in the tab order, removing the outline does not impact keyboard navigation. */
+#typing {
+    outline: none;
+}
+
+#typing:focus,
+#typing:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
 .keyboard {
     width: 50rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     row-gap: 0.25rem;
+}
+
+/* Ensure the keyboard can be force-hidden when toggled */
+.keyboard.hidden {
+    display: none;
 }
 
 .row {
@@ -174,6 +192,14 @@ body {
 
 #startGameBtn {
     font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D4FF9D;
+    background-color: #03131A;
+    color: #F8F8F8;
+}
+
+#toggleKeyboardBtn {
+    font-size: 1rem;
     border-radius: 0.5rem;
     border: 1px solid #D4FF9D;
     background-color: #03131A;

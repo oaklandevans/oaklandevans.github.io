@@ -521,6 +521,22 @@ function markKey(activeKey) {
     }
 }
 
+// Toggle on-screen keyboard and hand guides visibility
+function toggleKeyboard() {
+    const keyboard = document.getElementById('keyboard');
+    const btn = document.getElementById('toggleKeyboardBtn');
+    if (!keyboard || !btn) return;
+    const isHidden = keyboard.classList.toggle('hidden');
+    btn.textContent = isHidden ? 'Show Keyboard' : 'Hide Keyboard';
+    // After any toggle, move focus back to the typing area to avoid re-triggering the button
+    btn.blur();
+    const typing = document.getElementById('typing');
+    if (typing && typeof typing.focus === 'function') {
+        // Do not scroll the page when programmatically focusing
+        typing.focus({ preventScroll: true });
+    }
+}
+
 const startGame = () => {
     startGameBtn.classList.add('hidden');
     typingDiv.innerHTML = '';
@@ -558,7 +574,7 @@ const startGame = () => {
 
         if (
             key === cursorCharacter.innerText ||
-            (key === 'Enter' && cursorCharacter.innerText === "\n") // handle enter
+            (key === 'Enter' && cursorCharacter.innerText === "\n") // handle return key
         ) {
             // we typed the correct key
             cursorCharacter.classList.remove('cursor');
