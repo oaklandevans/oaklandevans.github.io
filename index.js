@@ -1,6 +1,7 @@
 const typingDiv = document.getElementById("typing");
 const statsDiv = document.getElementById("stats");
 const startGameBtn = document.getElementById("startGameBtn");
+const headerEl = document.getElementById("header");
 
 const paragraphs = [
     // section 1
@@ -539,6 +540,7 @@ function toggleKeyboard() {
 
 const startGame = () => {
     startGameBtn.classList.add('hidden');
+    if (headerEl) headerEl.classList.add('hidden');
     typingDiv.innerHTML = '';
     statsDiv.innerHTML = '';
 
@@ -614,10 +616,11 @@ const startGame = () => {
             const wps = numberOfWords / seconds;
             const wpm = wps * 60.0;
             // Display Stats
-            document.getElementById('stats').innerText = `wpm = ${wpm.toFixed(2)}`;
+            document.getElementById('stats').innerText = `${wpm.toFixed(0)} WPM!`;
 
             document.removeEventListener('keydown', keydown);
             startGameBtn.classList.remove('hidden');
+            if (headerEl) headerEl.classList.remove('hidden');
             return;
         }
 

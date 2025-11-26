@@ -31,12 +31,15 @@ body {
 #header {
     font-size: 3rem;
     color: #F8F8F8;
+    margin-bottom: 0;
 }
 
 /* Remove default browser focus outlines on the typing area to keep styling consistent
    We programmatically focus #typing (tabindex="-1") to capture keystrokes after toggling the keyboard.
    Since it isn't in the tab order, removing the outline does not impact keyboard navigation. */
 #typing {
+    /* Keep the typing section offset from the very top even when header hides */
+    margin-top: 2rem;
     outline: none;
 }
 
