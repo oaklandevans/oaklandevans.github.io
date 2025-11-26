@@ -187,6 +187,35 @@ body {
     0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
 }
 
+/* Error pulse: briefly shift the green glow to a soft red and back */
+@keyframes error-pulse {
+    0% {
+        box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+        0 0 0 0 white,
+        0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    }
+    35% {
+        box-shadow: inset 0 0 1em rgba(255, 107, 107, 0.35),
+        0 0 0 0 white,
+        0.3em 0.3em 2em rgba(255, 107, 107, 0.7);
+    }
+    100% {
+        box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+        0 0 0 0 white,
+        0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    }
+}
+
+.error-pulse {
+    animation: error-pulse 250ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .error-pulse {
+        animation-duration: 1ms; /* effectively no animation */
+    }
+}
+
 #stats {
     font-size: 1.5rem;
     color: #F8F8F8;

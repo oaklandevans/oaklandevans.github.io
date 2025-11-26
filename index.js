@@ -578,6 +578,12 @@ const startGame = () => {
     // Prevent browser default scrolling (e.g., Space/PageDown/Arrow keys) during gameplay
     const keydown = (event) => {
         const key = event.key;
+
+        // Ignore pure Shift presses so they don't count as errors or start the timer
+        // This prevents false negatives when a user holds Shift to type symbols/capitals
+        if (key === 'Shift') {
+            return;
+        }
         // Only prevent default for keys that would scroll the page
         const scrollKeys = new Set([' ', 'Spacebar', 'PageDown', 'PageUp', 'ArrowDown', 'ArrowUp', 'ArrowLeft', 'ArrowRight', 'Home', 'End']);
         if (scrollKeys.has(key) && typeof event.preventDefault === 'function') {
@@ -603,6 +609,14 @@ const startGame = () => {
             const activeFingerElements = document.querySelectorAll('.active-finger');
             if (activeFingerElements.length > 0) {
                 activeFingerElements.forEach(element => element.classList.remove('active-finger'));
+            }
+        } else {
+            // wrong key: trigger a quick red pulse on the typing area
+            if (typingDiv) {
+                typingDiv.classList.remove('error-pulse');
+                // force reflow so the animation can retrigger on rapid mistakes
+                void typingDiv.offsetWidth;
+                typingDiv.classList.add('error-pulse');
             }
         }
 
