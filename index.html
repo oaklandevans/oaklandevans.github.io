@@ -5,176 +5,26 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>KeyType</title>
+        <title>Oakland Evans - Projects</title>
         <link rel="stylesheet" href="styles.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
-        <h1 id="header">KeyType</h1>
-        <div id="typing" tabindex="-1">Better Every Day</div>
-        <div id="stats"></div>
-        <button id="startGameBtn" onclick="startGame()">Start Game</button>
-        <button id="toggleKeyboardBtn" onclick="toggleKeyboard()">Show Keyboard</button>
-        <div id="keyboard" class="keyboard hidden">
+        <header>
+            <h1>Oakland Evans</h1>
+            <p class="subtitle">Projects & Tools</p>
+        </header>
 
-            <div id="row1" class="row">
-                <span id="`" class="dual-key">
-                    <span>~</span>
-                    <span>`</span>
-                </span>
-                <span id="1" class="dual-key">
-                    <span>!</span>
-                    <span>1</span>
-                </span>
-                <span id="2" class="dual-key">
-                    <span>@</span>
-                    <span>2</span>
-                </span>
-                <span id="3" class="dual-key">
-                    <span>#</span>
-                    <span>3</span>
-                </span>
-                <span id="4" class="dual-key">
-                    <span>$</span>
-                    <span>4</span>
-                </span>
-                <span id="5" class="dual-key">
-                    <span>%</span>
-                    <span>5</span>
-                </span>
-                <span id="6" class="dual-key">
-                    <span>^</span>
-                    <span>6</span>
-                </span>
-                <span id="7" class="dual-key">
-                    <span>&</span>
-                    <span>7</span>
-                </span>
-                <span id="8" class="dual-key">
-                    <span>*</span>
-                    <span>8</span>
-                </span>
-                <span id="9" class="dual-key">
-                    <span>(</span>
-                    <span>9</span>
-                </span>
-                <span id="0" class="dual-key">
-                    <span>)</span>
-                    <span>0</span>
-                </span>
-                <span id="-" class="dual-key">
-                    <span>_</span>
-                    <span>-</span>
-                </span>
-                <span id="=" class="dual-key">
-                    <span>+</span>
-                    <span>=</span>
-                </span>
-                <span id="delete" class="rectangle-sm">Delete</span>
+        <main>
+            <div class="project-grid">
+                <a href="keytype.html" class="project-card">
+                    <div class="card-content">
+                        <h2>KeyType</h2>
+                        <p>Interactive typing trainer with on-screen keyboard and real-time finger positioning guides</p>
+                    </div>
+                </a>
             </div>
-
-            <div id="row2" class="row">
-                <span id="tab" class="rectangle-sm">Tab</span>
-                <span id="q" class="single-key">Q</span>
-                <span id="w" class="single-key">W</span>
-                <span id="e" class="single-key">E</span>
-                <span id="r" class="single-key">R</span>
-                <span id="t" class="single-key">T</span>
-                <span id="y" class="single-key">Y</span>
-                <span id="u" class="single-key">U</span>
-                <span id="i" class="single-key">I</span>
-                <span id="o" class="single-key">O</span>
-                <span id="p" class="single-key">P</span>
-                <span id="[" class="dual-key">
-                    <span>{</span>
-                    <span>[</span>
-                </span>
-                <span id="]" class="dual-key">
-                    <span>}</span>
-                    <span>]</span>
-                </span>
-                <span id="\" class="dual-key">
-                    <span>|</span>
-                    <span>\</span>
-                </span>
-            </div>
-
-            <div id="row3" class="row">
-                <span id="capsLock" class="rectangle-med">CapsLock</span>
-                <span id="a" class="single-key">A</span>
-                <span id="s" class="single-key">S</span>
-                <span id="d" class="single-key">D</span>
-                <span id="f" class="single-key">F</span>
-                <span id="g" class="single-key">G</span>
-                <span id="h" class="single-key">H</span>
-                <span id="j" class="single-key">J</span>
-                <span id="k" class="single-key">K</span>
-                <span id="l" class="single-key">L</span>
-                <span id=";" class="dual-key">
-                    <span>:</span>
-                    <span>;</span>
-                </span>
-                <span id="'" class="dual-key">
-                    <span>"</span>
-                    <span>'</span>
-                </span>
-                <span id="enter" class="rectangle-med">Enter</span>
-            </div>
-
-            <div id="row4" class="row">
-                <span id="shiftLeft" class="rectangle-lg">Shift</span>
-                <span id="z" class="single-key">Z</span>
-                <span id="x" class="single-key">X</span>
-                <span id="c" class="single-key">C</span>
-                <span id="v" class="single-key">V</span>
-                <span id="b" class="single-key">B</span>
-                <span id="n" class="single-key">N</span>
-                <span id="m" class="single-key">M</span>
-                <span id="," class="dual-key">
-                    <span><</span>
-                    <span>,</span>
-                </span>
-                <span id="." class="dual-key">
-                    <span>></span>
-                    <span>.</span>
-                </span>
-                <span id="/" class="dual-key">
-                    <span>?</span>
-                    <span>/</span>
-                </span>
-                <span id="shiftRight" class="rectangle-lg">Shift</span>
-            </div>
-
-            <div id="row5" class="row">
-                <span id="controlLeft" class="rectangle-med">Control</span>
-                <span id="optLeft" class="rectangle-sm">Opt</span>
-                <span id="cmdLeft" class="rectangle-med">Cmd</span>
-                <span id="space" class="rectangle-x-lg">Space</span>
-                <span id="cmdRight" class="rectangle-med">Cmd</span>
-                <span id="optRight" class="rectangle-sm">Opt</span>
-                <span id="controlRight" class="rectangle-med">Control</span>
-            </div>
-
-            <div class="hands">
-                <div class="left-hand">
-                    <div id="finger-l5" class="finger finger-5"></div>
-                    <div id="finger-l4" class="finger finger-4"></div>
-                    <div id="finger-l3" class="finger finger-3"></div>
-                    <div id="finger-l2" class="finger finger-2"></div>
-                    <div id="finger-l1" class="finger finger-1"></div>
-                </div>
-                <div class="right-hand">
-                    <div id="finger-r1" class="finger finger-1"></div>
-                    <div id="finger-r2" class="finger finger-2"></div>
-                    <div id="finger-r3" class="finger finger-3"></div>
-                    <div id="finger-r4" class="finger finger-4"></div>
-                    <div id="finger-r5" class="finger finger-5"></div>
-                </div>
-            </div>
-
-        </div>
-        <script src="index.js"></script>
+        </main>
     </body>
 
 </html>
