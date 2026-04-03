@@ -1,0 +1,120 @@
+.keytype-container {
+    background-color: #03131A;
+    margin: 0;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+    min-height: 100vh;
+}
+
+.cursor {
+    background-color: #8FD6E8;
+}
+
+.done {
+    color: rgb(128, 128, 128);
+}
+
+.hidden {
+    display: none;
+}
+
+.enter-icon {
+    display: initial !important;
+}
+
+#header {
+    font-size: 3rem;
+    color: #F8F8F8;
+    margin-bottom: 0;
+}
+
+#typing {
+    outline: none;
+    width: 40rem;
+    max-width: 90vw;
+    min-height: 8rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #F8F8F8;
+    border: 1px solid #D4FF9D;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+#typing:focus,
+#typing:focus-visible {
+    outline: none;
+}
+
+@keyframes error-pulse {
+    0% {
+        box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                    0 0 0 0 white,
+                    0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    }
+    35% {
+        box-shadow: inset 0 0 1em rgba(255, 107, 107, 0.35),
+                    0 0 0 0 white,
+                    0.3em 0.3em 2em rgba(255, 107, 107, 0.7);
+    }
+    100% {
+        box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                    0 0 0 0 white,
+                    0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+    }
+}
+
+.error-pulse {
+    animation: error-pulse 250ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .error-pulse {
+        animation-duration: 1ms;
+    }
+}
+
+#stats {
+    font-size: 1.5rem;
+    color: #F8F8F8;
+}
+
+#startGameBtn {
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D4FF9D;
+    background-color: #03131A;
+    color: #F8F8F8;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#toggleKeyboardBtn {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D4FF9D;
+    background-color: #03131A;
+    color: #F8F8F8;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#startGameBtn:hover {
+    background-color: #8FD6E8;
+    color: #03131A;
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+}
+
+.active-key {
+    background-color: #8FD6E8;
+}

@@ -1,0 +1,183 @@
+.keyboard {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.25rem;
+}
+
+.keyboard.hidden {
+    display: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    column-gap: 0.25rem;
+}
+
+.single-key {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.dual-key {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-x-sm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-sm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-med {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 6.5rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.rectangle-x-lg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 17rem;
+    height: 3rem;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #03131A;
+    text-align: center;
+    border: #D4FF9D solid 1px;
+    border-radius: 0.5rem;
+}
+
+.hands {
+    display: flex;
+    flex-direction: row;
+    column-gap: 3rem;
+    margin-top: 1rem;
+}
+
+.left-hand {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 0.35rem;
+}
+
+.right-hand {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    column-gap: 0.35rem;
+}
+
+.finger {
+    background-color: #D4FF9D;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    opacity: 0.5;
+}
+
+.active-finger {
+    background-color: #8FD6E8;
+    opacity: 1;
+}
+
+.finger-1 {
+    width: 3.5rem;
+    height: 4rem;
+}
+
+.finger-2 {
+    width: 3rem;
+    height: 10rem;
+}
+
+.finger-3 {
+    width: 3rem;
+    height: 12rem;
+}
+
+.finger-4 {
+    width: 3rem;
+    height: 11rem;
+}
+
+.finger-5 {
+    width: 3rem;
+    height: 6rem;
+}
