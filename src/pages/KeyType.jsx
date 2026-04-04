@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Keyboard from '../components/Keyboard'
 import { markKey } from '../utils/keyMapping'
 import { paragraphs } from '../utils/paragraphs'
@@ -13,6 +14,7 @@ function KeyType() {
   const [cursorIndex, setCursorIndex] = useState(0)
   const typingRef = useRef(null)
   const startTimeRef = useRef(null)
+  const navigate = useNavigate()
 
   const startGame = () => {
     setIsGameActive(true)
@@ -139,6 +141,11 @@ function KeyType() {
       {!isGameActive && (
         <button id="startGameBtn" onClick={startGame}>
           Start Game
+        </button>
+      )}
+      {wpm && (
+        <button id="backHomeBtn" onClick={() => navigate('/')}>
+          Back to Home
         </button>
       )}
       <button id="toggleKeyboardBtn" onClick={toggleKeyboard}>

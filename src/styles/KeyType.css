@@ -107,7 +107,33 @@
     cursor: pointer;
 }
 
+#toggleKeyboardBtn:hover {
+    background-color: #8FD6E8;
+    color: #03131A;
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+}
+
+#backHomeBtn {
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D4FF9D;
+    background-color: #03131A;
+    color: #F8F8F8;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
 #startGameBtn:hover {
+    background-color: #8FD6E8;
+    color: #03131A;
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+}
+
+#backHomeBtn:hover {
     background-color: #8FD6E8;
     color: #03131A;
     box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
