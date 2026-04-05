@@ -17,9 +17,14 @@ export default function Home(): React.ReactElement {
               <p>Interactive typing trainer with on-screen keyboard and real-time finger positioning guides</p>
             </div>
           </Link>
+          <Link to="/mario-online" className="project-card">
+            <div className="card-content">
+              <h2>Mario Online</h2>
+              <p>Classic Mario game clone with jumping, fireball shooting, and Goomba stomping</p>
+            </div>
+          </Link>
         </div>
       </main>
     </>
   )
 }
-
