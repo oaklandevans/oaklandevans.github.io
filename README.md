@@ -54,8 +54,6 @@ The output will be in the `dist/` directory.
 
 This project is automatically deployed to [GitHub Pages](https://oaklandevans.github.io) via GitHub Actions whenever changes are pushed to the `main` branch.
 
-For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
-
 ## 📂 Project Structure
 - `src/components/`: Reusable React components (e.g., Keyboard).
 - `src/pages/`: Main page components (Home, KeyType).
