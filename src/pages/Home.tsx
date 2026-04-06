@@ -23,6 +23,12 @@ export default function Home(): React.ReactElement {
               <p>Classic Mario game clone with jumping, fireball shooting, and Goomba stomping</p>
             </div>
           </Link>
+          <Link to="/about" className="project-card">
+            <div className="card-content">
+              <h2>About</h2>
+              <p>Learn more about Oakland Evans and the technologies used in these projects</p>
+            </div>
+          </Link>
         </div>
       </main>
     </>
