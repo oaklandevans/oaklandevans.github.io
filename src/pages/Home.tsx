@@ -13,7 +13,7 @@ export default function Home(): React.ReactElement {
         <div className="project-grid">
           <Link to="/keytype" className="project-card">
             <div className="card-content">
-              <h2>KeyType</h2>
+              <h2>Key Type</h2>
               <p>Interactive typing trainer with on-screen keyboard and real-time finger positioning guides</p>
             </div>
           </Link>
