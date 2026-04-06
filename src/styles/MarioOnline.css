@@ -1,0 +1,27 @@
+.mario-online-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #222;
+  gap: 1rem;
+}
+
+.mario-online-container canvas {
+  border: 1px solid #cccccc;
+}
+
+.mario-online-controls {
+  display: flex;
+  gap: 2rem;
+  color: #ccc;
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.mario-online-controls span {
+  white-space: nowrap;
+}
+

@@ -1,15 +1,36 @@
-import React from 'react';
+import { useEffect, useRef } from 'react'
+import { Game } from '../game/Game'
+import '../styles/MarioOnline.css'
 
 export default function MarioOnline() {
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+
+  useEffect(() => {
+    const canvas = canvasRef.current
+    if (!canvas) return
+
+    const game = new Game(canvas)
+    game.start()
+
+    return () => {
+      game.destroy()
+    }
+  }, [])
+
   return (
-    <div style={{ width: '100%', height: '100vh', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <iframe
-        src="/Mario_Online/MarioOnline.html"
-        width="1020"
-        height="550"
-        style={{ border: 'none' }}
-        title="Mario Online Game"
+    <div className="mario-online-container">
+      <canvas
+        ref={canvasRef}
+        width={1000}
+        height={500}
+        style={{ display: 'block' }}
       />
+      <div className="mario-online-controls">
+        <span>Move Right: →</span>
+        <span>Move Left: ←</span>
+        <span>Jump: Space</span>
+        <span>Fireball: Ctrl</span>
+      </div>
     </div>
-  );
+  )
 }
