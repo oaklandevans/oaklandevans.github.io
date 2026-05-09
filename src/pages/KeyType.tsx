@@ -21,6 +21,18 @@ function KeyType(): ReactElement {
   const startTimeRef = useRef<Date | null>(null)
   const navigate = useNavigate()
 
+  const stopGame = (): void => {
+    setIsGameActive(false)
+    setHeaderVisible(true)
+    setShowKeyboard(false)
+    setCharacters([])
+    setCursorIndex(0)
+    startTimeRef.current = null
+    setWpm(null)
+    document.querySelectorAll('.active-key').forEach(el => el.classList.remove('active-key'))
+    document.querySelectorAll('.active-finger').forEach(el => el.classList.remove('active-finger'))
+  }
+
   const startGame = (): void => {
     setIsGameActive(true)
     setHeaderVisible(false)
@@ -148,6 +160,11 @@ function KeyType(): ReactElement {
       {wpm && (
         <button id="backHomeBtn" onClick={() => navigate('/')}>
           Back to Home
+        </button>
+      )}
+      {isGameActive && (
+        <button id="stopGameBtn" onClick={stopGame}>
+          Stop Game
         </button>
       )}
       {isGameActive && (

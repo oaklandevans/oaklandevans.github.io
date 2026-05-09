@@ -107,6 +107,24 @@
     cursor: pointer;
 }
 
+#stopGameBtn {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #FF6B6B;
+    background-color: #03131A;
+    color: #F8F8F8;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#stopGameBtn:hover {
+    background-color: #FF6B6B;
+    color: #03131A;
+    box-shadow: inset 0 0 1em rgba(255, 107, 107, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(255, 107, 107, 0.6);
+}
+
 #toggleKeyboardBtn:hover {
     background-color: #8FD6E8;
     color: #03131A;
