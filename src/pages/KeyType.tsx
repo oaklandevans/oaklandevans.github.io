@@ -87,6 +87,7 @@ function KeyType(): ReactElement {
           setWpm(Math.round(calculatedWpm))
           setIsGameActive(false)
           setHeaderVisible(true)
+          setShowKeyboard(false)
         }
       } else {
         // Wrong key - trigger error pulse
@@ -114,10 +115,6 @@ function KeyType(): ReactElement {
 
   const toggleKeyboard = (): void => {
     setShowKeyboard(!showKeyboard)
-    const keyboard = document.getElementById('keyboard')
-    if (keyboard) {
-      keyboard.classList.toggle('hidden')
-    }
     const typing = typingRef.current
     if (typing) {
       typing.focus({ preventScroll: true })
@@ -153,13 +150,14 @@ function KeyType(): ReactElement {
           Back to Home
         </button>
       )}
-      <button id="toggleKeyboardBtn" onClick={toggleKeyboard}>
-        {showKeyboard ? 'Hide Keyboard' : 'Show Keyboard'}
-      </button>
-      <Keyboard />
+      {isGameActive && (
+        <button id="toggleKeyboardBtn" onClick={toggleKeyboard}>
+          {showKeyboard ? 'Hide Keyboard' : 'Show Keyboard'}
+        </button>
+      )}
+      <Keyboard visible={showKeyboard} />
     </div>
   )
 }
 
 export default KeyType
-

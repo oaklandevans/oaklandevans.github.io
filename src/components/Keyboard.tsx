@@ -1,8 +1,12 @@
 import '../styles/Keyboard.css'
 
-export default function Keyboard(): React.ReactElement {
+interface KeyboardProps {
+  visible?: boolean
+}
+
+export default function Keyboard({ visible = false }: KeyboardProps): React.ReactElement {
   return (
-    <div id="keyboard" className="keyboard hidden">
+    <div id="keyboard" className={`keyboard${visible ? '' : ' hidden'}`}>
       <div id="row1" className="row">
         <span id="`" className="dual-key">
           <span>~</span>
@@ -160,4 +164,3 @@ export default function Keyboard(): React.ReactElement {
     </div>
   )
 }
-
