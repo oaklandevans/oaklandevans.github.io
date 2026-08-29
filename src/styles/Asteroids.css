@@ -1,0 +1,129 @@
+.asteroids-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #03131A;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.asteroids-hud {
+    display: flex;
+    gap: 2rem;
+    color: #D4FF9D;
+    font-family: monospace;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+.asteroids-canvas-wrap {
+    position: relative;
+    line-height: 0;
+}
+
+.asteroids-canvas-wrap canvas {
+    display: block;
+    max-width: 90vw;
+    border: 2px solid #D4FF9D;
+    border-radius: 0.5rem;
+    box-shadow: 0.3em 0.3em 2em rgba(212, 255, 157, 0.2);
+    background: #000000;
+}
+
+.asteroids-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(3, 19, 26, 0.75);
+    color: #F8F8F8;
+    font-family: monospace;
+    text-align: center;
+}
+
+.asteroids-overlay p {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+}
+
+.asteroids-overlay-score {
+    font-size: 1.1rem !important;
+    color: #8FD6E8;
+}
+
+.asteroids-controls {
+    display: flex;
+    gap: 2rem;
+    color: #8FD6E8;
+    font-family: monospace;
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.asteroids-controls span {
+    white-space: nowrap;
+}
+
+.asteroids-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#asteroidsStartBtn,
+#asteroidsBackBtn {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #D4FF9D;
+    background-color: #03131A;
+    color: #F8F8F8;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#asteroidsStartBtn:hover,
+#asteroidsBackBtn:hover {
+    background-color: #8FD6E8;
+    color: #03131A;
+    box-shadow: inset 0 0 1em rgba(212, 255, 157, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(212, 255, 157, 0.6);
+}
+
+#asteroidsStopBtn {
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #FF6B6B;
+    background-color: #03131A;
+    color: #F8F8F8;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#asteroidsStopBtn:hover {
+    background-color: #FF6B6B;
+    color: #03131A;
+    box-shadow: inset 0 0 1em rgba(255, 107, 107, 0.3),
+                0 0 0 0 white,
+                0.3em 0.3em 2em rgba(255, 107, 107, 0.6);
+}
+
+@media (max-width: 600px) {
+    .asteroids-hud {
+        font-size: 0.9rem;
+        gap: 1rem;
+    }
+
+    .asteroids-controls {
+        gap: 1rem;
+    }
+}
