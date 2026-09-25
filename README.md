@@ -2,6 +2,8 @@
 
 Welcome to my personal projects repository. This site hosts various tools and games, starting with **KeyType**, an interactive typing trainer.
 
+🌐 **Live site:** [oaklandevans.com](https://oaklandevans.com)
+
 ## 🚀 KeyType
 
 KeyType is a modern typing trainer designed to help you improve your typing speed and accuracy.
@@ -73,7 +75,11 @@ npm run test:watch
 
 ## 🚢 Deployment
 
-This project is automatically deployed to [GitHub Pages](https://oaklandevans.github.io) via GitHub Actions whenever changes are pushed to the `main` branch.
+This project is automatically deployed to GitHub Pages via GitHub Actions whenever changes are pushed to the `main` branch, and is served at **[oaklandevans.com](https://oaklandevans.com)**.
+
+- **Custom domain**: registered with Cloudflare, with DNS in Cloudflare set to "DNS only" (not proxied) and pointing at GitHub Pages. The domain is configured in the repo's **Settings → Pages**, not with a `CNAME` file, because the site deploys through Actions.
+- **HTTPS**: enforced, using a certificate that GitHub Pages issues and renews automatically.
+- **Redirects**: `www.oaklandevans.com`, `oaklandevans.github.io` and all `http://` URLs redirect to `https://oaklandevans.com`.
 
 ## 📂 Project Structure
 - `src/components/`: Reusable React components (e.g., Keyboard).

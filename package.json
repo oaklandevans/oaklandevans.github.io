@@ -21,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/oaklandevans/oaklandevans.github.io/issues"
   },
-  "homepage": "https://oaklandevans.github.io",
+  "homepage": "https://oaklandevans.com",
   "devDependencies": {
     "@testing-library/jest-dom": "^7.0.1",
     "@testing-library/react": "^16.3.3",
